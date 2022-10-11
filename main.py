@@ -58,13 +58,13 @@ if __name__ == '__main__':
 
     dates = []
     rates = []
-    if "data" in json_response_data:
-        for entry in json_response_data["data"]:
+    for entry in json_response_data["data"]:
+        if DEBUG:
             print(entry)
-            entryDate = entry["record_date"]
-            date1 = datetime.strptime(entryDate, '%Y-%m-%d')
-            dates.append(date1.date())
-            rates.append(float(entry["avg_interest_rate_amt"]))
+        entryDate = entry["record_date"]
+        date1 = datetime.strptime(entryDate, '%Y-%m-%d')
+        dates.append(date1.date())
+        rates.append(float(entry["avg_interest_rate_amt"]))
 
     plt.plot_date(dates, rates, '-o')
 
