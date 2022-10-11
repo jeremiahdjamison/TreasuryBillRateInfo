@@ -56,6 +56,10 @@ if __name__ == '__main__':
         print("No data in request")
         sys.exit("No data in request")
 
+    if len(json_response_data["data"]) == 0:
+        print("No entries returned in response data")
+        sys.exit("No entries return in response data")
+
     dates = []
     rates = []
     for entry in json_response_data["data"]:
