@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     FILTER_API_PATH = '?filter='
     RECORD_DATE_FILTER = 'record_date:gt:' + EARLIEST_DATE + ','
-    SECURITY_DESC_FILTER = 'security_desc:eq:Treasury Bills,'
+    SECURITY_DESC_FILTER = 'security_desc:eq:Treasury Bills'
     FILTER = FILTER_API_PATH + RECORD_DATE_FILTER + SECURITY_DESC_FILTER
 
     REST_PATH = BASE_REST_API_PATH + ENDPOINT_API_PATH + FILTER
@@ -78,3 +78,16 @@ if __name__ == '__main__':
     plt.show()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
+
+
+
+
+
+
+
+
+
+
